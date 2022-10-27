@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Cabecalho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Folha PGTO"
+        android:textSize="35sp"
+        android:textColor="@color/white"
+        android:background="@color/cardview_dark_background"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/edtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Cabecalho"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:hint="Nome funcionário"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/edtSalario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:hint="salário bruto"
+        android:textSize="25sp"
+        android:layout_below="@+id/edtNome"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:id="@+id/txtSexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:text="Sexo"
+        android:textSize="25sp"
+        android:layout_below="@id/edtSalario"/>
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSexo"
+        android:layout_marginLeft="15dp">
+        <RadioButton
+            android:id="@+id/rbMasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masculino"
+            android:textSize="20sp"
+
+            />
+        <RadioButton
+            android:id="@+id/rbFem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Feminino"
+            android:textSize="20sp"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edtFilhos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:hint="N° de filhos"
+        android:textSize="25dp"
+        android:layout_below="@+id/radiogroup"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/btnCalc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="calcular"
+        android:textSize="25sp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:layout_below="@+id/edtFilhos"/>
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="**Resultado**"
+        android:textSize="25sp"
+        android:layout_below="@+id/btnCalc"/>
+
+    <TextView
+        android:id="@+id/txtReNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="25sp"
+        android:layout_below="@+id/txtResultado"/>
+
+    <TextView
+        android:id="@+id/txtReINSS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="25sp"
+        android:layout_below="@+id/txtReNome"/>
+
+    <TextView
+        android:id="@+id/txtReIR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="25sp"
+        android:layout_below="@+id/txtReINSS"/>
+
+    <TextView
+        android:id="@+id/txtReSalBru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="25sp"
+        android:layout_below="@+id/txtReIR"/>
+
+</RelativeLayout>
